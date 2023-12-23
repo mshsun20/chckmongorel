@@ -47,7 +47,7 @@ module.exports = {
     },
 
     read: async (req, res) => {
-        const Av = await AvModel.find().populate('avid').populate('rid').populate('cvid').populate('sdid')
+        const Av = await AvModel.find()
         res.json({success:'All AV data Retrieved Successfully.', statuscode:200, data:Av})
     },
 
